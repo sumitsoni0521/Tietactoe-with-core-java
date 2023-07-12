@@ -1,19 +1,27 @@
+// use of Arrays , Looping, if-else, class , Object, & Inheritance.
+//class is not exit in reality object of class is exit.
+//2D array
+
 import java.util.*;
 class TicTacToe {
 	static char board[][];
-
+	// to present the array index we use constructor and this constructor does not
+	// have a return type
 	public TicTacToe() {
-		board = new char[3][3];
-		inBoard();
+		/* here i give reference of board */
+		// If somebody creates an object Constructor gets called Constructor will create
+		// a three cross three array and it is going to give it as board.
+		board = new char[3][3];/*default value is present in unicode formate buz java follow unicode formate, which is called null char.*/
+		inBoard();// call the function.
 	}
 	void inBoard() {
 		for (int i = 0; i < board.length; i++) {
 			for (int j = 0; j < board[i].length; j++) {
-				board[i][j] = ' ';
+				board[i][j] = ' ';// empty
 			}
 		}
 	}
-	static void dispBoard() {
+	static void dispBoard() {// display the board of 3 rows & 3 columns.
 		System.out.println("-------------");
 		for (int i = 0; i < board.length; i++) {
 			System.out.print("| ");
